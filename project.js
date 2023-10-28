@@ -7,6 +7,8 @@
 // 7. Play again
 
 const deposit = () => {
+  const depositAmount = prompt("Enter a deposit amount: ")
+  const numberDepositAmount = parseFloat(depositAmount)
   return      
 }
 
