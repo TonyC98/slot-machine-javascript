@@ -7,11 +7,13 @@
 // 7. Play again
 
 const deposit = () => {
-  const depositAmount = prompt("Enter a deposit amount: ")
-  const numberDepositAmount = parseFloat(depositAmount)
-  
-  if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
-    console.log("Invalid deposit amount, try again.")
+  while (true) {
+    const depositAmount = prompt("Enter a deposit amount: ")
+    const numberDepositAmount = parseFloat(depositAmount)
+    
+    if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
+      console.log("Invalid deposit amount, try again.")
+    }
   }   
 }
 
