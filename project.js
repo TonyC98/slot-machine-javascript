@@ -12,7 +12,6 @@ const deposit = () => {
   while (true) {
     const depositAmount = prompt("Enter a deposit amount: ")
     const numberDepositAmount = parseFloat(depositAmount)
-    
     if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
       console.log("Invalid deposit amount, try again.")
     } else {
@@ -27,11 +26,12 @@ const getNumberOfLines = () => {
     const numberOfLines = parseFloat(lines)
     
     if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
-      console.log("Invalid deposit amount, try again.")
+      console.log("Invalid number of lines, try again.")
     } else {
-      return numberDepositAmount
+      return numberOfLines
     }
   }   
 }
 
 const depositAmount = deposit()
+const numberOfLines = getNumberOfLines()
