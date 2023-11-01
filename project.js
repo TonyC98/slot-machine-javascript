@@ -68,7 +68,7 @@ const spin = () => {
       symbols.push(symbol)
     }
   }
-  const reels = [[]]
+  const reels = []
   for (let i = 0; i < COLS; i++) {
     reels.push([])
     const reelSymbols = [...symbols]
@@ -91,6 +91,18 @@ const transpose = (reels) => {
     }
   }
   return rows
+}
+
+const printRows = (rows) => {
+  for (const row of rows) {
+    let rowString = ""
+    for (const [i, symbol] of rows.entries()) {
+      rowString += symbol
+      if (i != rows.length -1 ) {
+        rowString +=  " | "
+      }
+    }
+  }
 }
 
 let balance = deposit()
